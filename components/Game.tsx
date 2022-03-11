@@ -29,7 +29,9 @@ const Game = (props: Props) => {
       const currentVerbs = currentVerb.replace(",", "").split(" ");
 
       return {
-        correct: currentVerbs.some((verb) => word.trim() === verb.trim()),
+        correct: currentVerbs.some(
+          (verb) => word.trim().toLowerCase() === verb.trim().toLowerCase()
+        ),
         word: currentVerb,
       };
     });
