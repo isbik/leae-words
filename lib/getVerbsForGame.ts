@@ -11,7 +11,7 @@ function shuffle(a: unknown[]) {
 
 export const getVerbsForGame = (mode: Mode): Verb[] => {
   if (mode === Mode.infinite) {
-    return shuffle(words);
+    return shuffle(words) as Verb[];
   }
 
   return shuffle(words).slice(0, mode) as Verb[];
